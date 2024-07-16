@@ -8,18 +8,18 @@ public class Main {
 
         // Step 1
 
-        LocalDateTime now = LocalDateTime.now();
-        System.out.println("Current date and time: " + now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        LocalDateTime nowTime = LocalDateTime.now();
+        System.out.println("Current date and time: " + nowTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
 
         // Step 2
 
-        LocalDate newDate = now.toLocalDate().plusWeeks(2);
+        LocalDate newDate = nowTime.toLocalDate().plusWeeks(2);
         System.out.println("Date after 2 weeks: " + newDate);
 
         // Step 3
 
         LocalDate specifiedDate = LocalDate.of(2024, 12, 31);
-        if (now.toLocalDate().isBefore(specifiedDate)) {
+        if (nowTime.toLocalDate().isBefore(specifiedDate)) {
             System.out.println("Current date is before " + specifiedDate);
         } else {
             System.out.println("Current date is after " + specifiedDate);
